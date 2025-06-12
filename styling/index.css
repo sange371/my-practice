@@ -1,0 +1,64 @@
+.weather-container{
+    display:block;
+    margin:80px auto;
+    backdrop-filter: blur(15px);
+    border:1px solid white;
+    border-radius:4px;
+    width:600px;
+    height:260px;
+
+}
+#city-name-input{
+    padding:8px;
+    margin:8px;
+    width:450px;
+    background:rgb(236, 235, 235);
+    border:1px solid rgb(155, 154, 154);
+    border-radius:2px;
+}
+#submit-button{
+    padding: 8px;
+    margin:2px;
+    width:100px;
+    background: rgb(236,235,235);
+    border:1px solid rgb(155,154,154);
+    border-radius:4px;
+}
+#weather-icon{
+    position:relative;
+    top:-70px;
+    right:-440px;
+    font-size:25px;
+}
+#temperature{
+    position:relative;
+    top:-70px;
+    right:-440px;
+    font-size:40px;
+    font-style:bold;
+}
+#celcius{
+    position:relative;
+    top:-88px;
+    right:-435px;
+    
+}
+#submit-button:hover{
+    opacity:0.7;
+}
+footer{
+    text-align:center;
+    font-size:12px;
+}
+body{
+    line-height:25px;
+    font-family:sans-serif;
+    background-image: url("https://images.pexels.com/photos/8704881/pexels-photo-8704881.jpeg?auto=compress&cs=tinysrgb&w=1200");
+    background-size: cover;
+    
+  
+}
+main{
+    margin:3px;
+    padding:3px;
+}
