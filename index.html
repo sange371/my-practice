@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling/index.css"/>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="weather-container">
+        <header>
+            <form>
+                <input type="text" placeholder="Enter a city name..." id="city-name-input" required/>
+                <button type="submit" id="submit-button">Search</button>
+            </form>
+        </header>
+        <main>
+            <h2>
+                Paris
+            </h2>
+            <span id="day">
+                <small>
+                    Thursday
+                </small>
+            </span>
+            <span id="time">
+                <small>
+                    16:27
+                </small>
+            </span>
+            <span id="condition">
+                <small>
+                    , warm
+                </small>
+            </span>
+            <br/>
+            <span>
+                <small>
+                    Humidity:
+                </small>
+            </span>
+            <span id="humidity">
+                <small>
+                    <strong>
+                        70%
+                    </strong>
+                </small>
+            </span>
+            <span>
+                <small>
+                    , Wind:
+                </small>
+            </span>
+            <span id="wind-speed">
+                <small>
+                    <strong>
+                        2.3km/h
+                    </strong>
+                </small>
+            </span>
+            <br/>
+            <span id="weather-icon">
+                <img src="" id="icon"/>
+            </span>
+            <span id="temperature">
+                20
+            </span>
+            <span id="celcius">
+                °C
+            </span>
+        </main>
+        <br/>
+        <footer>
+            This code was coded by
+            <span>
+                <a href="#" target="_blank">Zusange Mbaleki</a>
+            </span>
+            and is on
+            <span>
+                <a href="#" target="_blank">Github</a>
+            </span>
+            also hosted on
+            <span>
+                <a href="#" target="_blank">Netlify</a>
+            </span>
+        </footer>
+    </div>
+    <script src="functioning/index.js"></script>
+</body>
+</html>
