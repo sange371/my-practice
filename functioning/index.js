@@ -7,7 +7,7 @@ function updateTemperature(response){
     let exactCondition=document.querySelector("#condition");
     let exactHumidity=document.querySelector("#humidity");
     let exactWindSpeed=document.querySelector("#wind-speed");
-    let exactIcon=document.querySelector("icon");
+    let exactIcon=document.querySelector("#icon");
     let exactTemperature=document.querySelector("#temperature");
     
     let temperature=Math.round(response.data.current.temp_c);
@@ -18,11 +18,11 @@ function updateTemperature(response){
     let hours=now.getHours().toString().padStart(2,"0");
     let minutes=now.getMinutes().toString().padStart(2,"0");
 
-    exactTemperature.innerHTML=temperature;
+    exactTemperature.innerHTML=`${temperature}`;
     heading.innerHTML=response.data.location.name;
     exactDay.innerHTML=day;
     exactTime.innerHTML=`${hours}:${minutes}`;
-    exactCondition.innerHTML=response.data.current.condition.text;
+    exactCondition.innerHTML=`, ${response.data.current.condition.text}`;
     exactHumidity.innerHTML=`${response.data.current.humidity}%`;
     exactWindSpeed.innerHTML=`${response.data.current.wind_kph}km/h`;
     exactIcon.setAttribute("src",`https:${response.data.current.condition.icon}`);
@@ -36,7 +36,7 @@ function changeTheCity(event){
     let apiKey="b22ddf4e40834df1a40195805250906";
     let apiUrl=`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
-    axios.get(apiUrl).the(updateTemperature).catch((error)=>
+    axios.get(apiUrl).then(updateTemperature).catch((error)=>
     {
         alert("AN ERROR OCCURED!");
     });
